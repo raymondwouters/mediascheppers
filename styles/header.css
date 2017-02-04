@@ -1,0 +1,322 @@
+/**
+ * header.css
+ * header styles
+ */
+
+
+
+/*
+    Main
+*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    overflow: hidden;
+}
+
+
+
+/*
+    Nav
+*/
+
+header .nav {
+    overflow: hidden;
+    height: 80px;
+    padding: 30px 50px;
+    background: #F8F8F8;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+
+/* logo */
+
+header .nav .logo {
+    float: left;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+header .nav .logo span:first-child {
+    display: block;
+}
+header .nav .logo span:last-child {
+    display: none;
+}
+
+
+/* links */
+
+header .nav .links {
+    float: right;
+    font-weight: 300;
+}
+header .nav .links a {
+    margin-left: 38px;
+}
+
+
+/* switch */
+
+header a.switch {
+    display: none;
+    position: relative;
+}
+header a.switch span {
+    display: block;
+}
+header a.switch span:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+header a.switch span i {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 7px;
+    margin-right: 4px;
+}
+header a.switch span i:before,
+header a.switch span i:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+header a.switch span:first-child i:before {
+    background-image: url("../images/icons/menu.png");
+}
+header a.switch span:first-child i:after {
+    background-image: url("../images/icons/menu-hover.png");
+}
+header a.switch span:last-child i:before {
+    background-image: url("../images/icons/close.png");
+}
+header a.switch span:last-child i:after {
+    background-image: url("../images/icons/close-hover.png");
+}
+header a.switch span i:before {
+    opacity: 1;
+}
+header a.switch span i:after {
+    opacity: 0;
+}
+header a.switch:hover {
+    color: #006AFF;
+}
+header a.switch:hover span i:before {
+    opacity: 0;
+}
+header a.switch:hover span i:after {
+    opacity: 1;
+}
+header a.switch {
+    -webkit-transition: color 0.3s ease-in-out;
+       -moz-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+}
+header a.switch span i:before,
+header a.switch span i:after {
+    -webkit-transition: opacity 0.3s ease-in-out;
+       -moz-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/*
+    Menu
+*/
+
+header .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #006AFF;
+    overflow: auto;
+}
+header .menu .links {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+header .menu .links a {
+    display: inline-block;
+    color: #FFFFFF;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #FFFFFF;
+    margin: 0 15px;
+}
+header .menu .tile {
+    background: none;
+}
+
+
+
+/*
+    Transitions
+*/
+
+header {
+    -webkit-transform: translateY(-80px);
+       -moz-transform: translateY(-80px);
+            transform: translateY(-80px);
+    -webkit-transition: -webkit-transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), height 0.3s ease-in-out;
+       -moz-transition:    -moz-transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), height 0.3s ease-in-out;
+            transition:         transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), height 0.3s ease-in-out;
+}
+header a.switch span:first-child {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+       -moz-transition:    -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+            transition:         transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+}
+header a.switch span:last-child {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20px);
+       -moz-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+       -moz-transition:    -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+            transition:         transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+
+
+}
+header.opened a.switch span:first-child {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+       -moz-transition:    -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+            transition:         transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s ease-in-out;
+}
+header.opened a.switch span:last-child {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+       -moz-transition:    -moz-transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+            transition:         transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s ease-in-out;
+}
+header .menu .links {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+       -moz-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: -webkit-transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+       -moz-transition:    -moz-transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+            transition:         transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+}
+header .menu .tile {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+       -moz-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: -webkit-transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+       -moz-transition:    -moz-transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+            transition:         transform 0.53s ease-in-out, opacity 0.53s ease-in-out;
+}
+
+
+/* ready */
+
+header.ready {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+}
+
+
+/* opened */
+
+header.opened {
+    height: 100%;
+}
+header.opened a.switch span:first-child {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+       -moz-transform: translateY(20px);
+            transform: translateY(20px);
+}
+header.opened a.switch span:last-child {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+}
+header.opened .menu .links {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition-delay: 0.14s, 0.14s;
+       -moz-transition-delay: 0.14s, 0.14s;
+            transition-delay: 0.14s, 0.14s;
+}
+header.opened .menu .tile {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition-delay: 0.6s, 0.6s;
+       -moz-transition-delay: 0.6s, 0.6s;
+            transition-delay: 0.6s, 0.6s;
+
+}
+
+
+
+/*
+    iPad
+*/
+
+@media (max-width: 1024px) {
+
+    header .nav {
+        padding: 30px 25px;
+    }
+    header .nav .links a {
+        display: none;
+    }
+    header .nav .links a.switch {
+        display: block;
+    }
+}
+
+
+
+/*
+    iPhone
+*/
+
+@media (max-width: 480px) {
+
+    header .nav {
+        padding: 30px 15px;
+    }
+    header .nav .logo span:first-child {
+        display: none;
+    }
+    header .nav .logo span:last-child {
+        display: block;
+    }
+    header .menu .links a {
+        margin: 0 10px;
+    }
+
+}

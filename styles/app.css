@@ -1,0 +1,384 @@
+/**
+ * app.css
+ * application styles
+ */
+
+
+
+/*
+    Fonts
+*/
+
+@font-face {
+    font-family: "Dosis";
+    src: url("../fonts/Dosis-Light.woff2") format('woff2'),
+         url("../fonts/Dosis-Light.woff") format('woff'),
+         url("../fonts/Dosis-Light.ttf") format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Dosis";
+    src: url("../fonts/Dosis-Book.woff2") format('woff2'),
+         url("../fonts/Dosis-Light.woff") format('woff'),
+         url("../fonts/Dosis-Light.ttf") format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Dosis";
+    src: url("../fonts/Dosis-Medium.woff2") format('woff2'),
+         url("../fonts/Dosis-Light.woff") format('woff'),
+         url("../fonts/Dosis-Light.ttf") format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Dosis";
+    src: url("../fonts/Dosis-SemiBold.woff2") format('woff2'),
+         url("../fonts/Dosis-Light.woff") format('woff'),
+         url("../fonts/Dosis-Light.ttf") format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Dosis";
+    src: url("../fonts/Dosis-Bold.woff2") format('woff2'),
+         url("../fonts/Dosis-Light.woff") format('woff'),
+         url("../fonts/Dosis-Light.ttf") format('truetype');
+    font-weight: 700;
+}
+
+
+
+/*
+    Globals
+*/
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    margin: 0;
+    background: #F8F8F8;
+    color: #1D1D1D;
+    overflow: hidden;
+    font-family: Dosis, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #1D1D1D;
+}
+p {
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 20px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+input {
+    font-family: Dosis, sans-serif;
+    border: none;
+    -webkit-appearance: none;
+}
+input:focus {
+    outline: none;
+}
+input[type=submit] {
+    cursor: pointer;
+}
+
+
+
+/*
+    Z-Indexes
+*/
+
+svg     {z-index: 3;}
+header  {z-index: 2;}
+section {z-index: 1;}
+aside   {z-index: 4;}
+
+
+
+/*
+    Buttons
+*/
+
+.button {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.button.white,
+.button.black {
+    margin: 40px auto 0 auto;
+    padding: 10px 20px;
+    border: 1px solid;
+    line-height: 20px;
+    background: none;
+}
+.button.black {
+    color: #1D1D1D;
+    border-color: #1D1D1D;
+}
+.button.white {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+.button.white:before,
+.button.black:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 3px;
+    z-index: -1;
+    -webkit-transition: background 0.3s ease-in-out;
+       -moz-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+}
+.button.black:hover:before,
+.button.white:hover:before {
+    background: #FCEC52;
+}
+.button.black:active:before,
+.button.white:active:before {
+    background: #52FCC1;
+}
+.button.yellow {
+    background: #FCEC52;
+    height: 48px;
+    line-height: 48px;
+    color: #1D1D1D;
+    -webkit-transition: background 0.3s ease-in-out;
+       -moz-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+}
+.button.yellow:hover {
+    background: #FFFFFF;
+}
+.button.yellow:active {
+    background: #52FCC1;
+}
+
+
+
+/*
+    Headings
+*/
+
+h2.large {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 37px;
+    letter-spacing: 13px;
+    line-height: 42px;
+    margin-bottom: 12px;
+}
+h2.default {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+h3.default {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+    line-height: 42px;
+}
+h2.fatty {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-top: 17px;
+    margin-bottom: 2px;
+}
+h1.usual {
+    line-height: 35px;
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+h2.usual {
+    line-height: 31px;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+
+/*
+    Cover
+*/
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.cover img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+/*    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden; */
+}
+
+
+
+/*
+    Logotype
+*/
+
+.logotype {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+.logotype img,
+.logotype b,
+.logotype i,
+.logotype i:before {
+    display: block;
+}
+.logotype img {
+    margin: 0 auto 12px auto;
+    width: 40px;
+}
+.logotype b {
+    font-weight: 600;
+}
+.logotype i {
+    font-size: 10px;
+    font-weight: 300;
+    font-style: normal;
+}
+.logotype i:before {
+    content: '';
+    margin: 10px auto;
+    width: 12px;
+    height: 2px;
+    background: #1D1D1D;
+}
+
+
+
+/*
+    Center
+*/
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    padding: 0 50px;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+  /*  -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden; */
+}
+
+
+
+/*
+    Disabled
+*/
+
+body.disabled {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+body.disabled section {
+    overflow: hidden;
+}
+body.disabled header {
+    right: 0 !important;
+}
+body.disabled svg {
+    margin-left: -15px !important;
+}
+
+
+
+/*
+    iPad
+*/
+
+@media (max-width: 1024px) {
+
+    .center {
+        padding: 0 25px;
+    }
+}
+
+
+
+/*
+    iPhone
+*/
+
+@media (max-width: 480px) {
+
+    .center {
+        padding: 0 15px;
+    }
+    h2.large {
+        font-size: 30px;
+        letter-spacing: 5px;
+        line-height: 35px;
+        margin-bottom: 17px;
+    }
+    h3.default {
+        font-size: 14px;
+        letter-spacing: 4px;
+        line-height: 23px;
+    }
+    h1.usual {
+        line-height: 40px;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+}

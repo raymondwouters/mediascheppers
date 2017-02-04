@@ -1,0 +1,147 @@
+/**
+ * section.css
+ * section styles
+ */
+
+
+
+/*
+    Main
+*/
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 50px 0 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+section:after {
+    content: '';
+    float: left;
+    width: 100%;
+    height: 50px;
+}
+section .tile {
+    margin-top: 4px;
+}
+section .tile:first-child {
+    margin-top: 0;
+}
+section .tile.right {
+    float: right;
+}
+
+
+
+/*
+    Hover
+*/
+
+section a.tile .cover {
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+       -moz-transition:    -moz-transform 0.3s ease-in-out;
+            transition:         transform 0.3s ease-in-out;
+}
+section a.tile .button {
+    -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+       -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+section a.tile:hover .cover {
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+            transform: scale(1);
+}
+section a.tile:hover .button {
+    color: #1D1D1D;
+    border-color: #1D1D1D;
+}
+section a.tile:hover .button:before,
+section a.tile:hover .button:before {
+    background: #FCEC52;
+}
+section a.tile:active .button:before,
+section a.tile:active .button:before {
+    background: #52FCC1;
+}
+
+
+
+/*
+    Transitions
+*/
+
+section .tile {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+       -moz-transform: translateY(200px);
+            transform: translateY(200px);
+    -webkit-transition: opacity 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), -webkit-transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+       -moz-transition: opacity 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99),    -moz-transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+            transition: opacity 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99),         transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+}
+section .tile:last-child {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+       -moz-transform: translateY(50px);
+            transform: translateY(50px);
+}
+section .tile .center {
+    -webkit-transform: translateY(50%);
+       -moz-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-transition: -webkit-transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+       -moz-transition:    -moz-transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+            transition:         transform 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+}
+section .tile.active {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+}
+section .tile.active .center {
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+section.hide .tile {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+       -moz-transform: translateY(200px);
+            transform: translateY(200px);
+}
+
+
+
+/*
+    iPad
+*/
+
+@media (max-width: 1024px) {
+
+    section {
+        padding: 80px 25px 50px 25px;
+    }
+}
+
+
+
+/*
+    iPhone
+*/
+
+@media (max-width: 480px) {
+
+    section {
+        padding: 80px 15px 50px 15px;
+    }
+
+}

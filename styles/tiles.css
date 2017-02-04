@@ -1,0 +1,560 @@
+/**
+ * tiles.css
+ * tiles styles
+ */
+
+
+
+/*
+    Main
+*/
+
+.tile {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+.tile:before {
+    content: '';
+    display: block;
+}
+
+
+
+/*
+    Project
+*/
+
+.tile.project {
+    width: 100%;
+    background: #E6E6E6;
+    color: #FFFFFF;
+}
+.tile.project:before {
+    padding-top: 40%;
+}
+.tile.project .center {
+    top: 52%;
+}
+
+
+
+/*
+    Print
+*/
+
+.tile.print {
+    width: calc(50% - 2px);
+    background: #0F5B89;
+    color: #FFFFFF;
+}
+.tile.print:before {
+    padding-top: 100%;
+}
+.tile.print img {
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    width: 70%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+
+
+}
+.tile.print .center {
+    top: 25%;
+}
+
+
+/*
+    Blank
+*/
+
+.tile.blank {
+    width: calc(50% - 2px);
+    background: #FFFFFF;
+}
+.tile.blank:before {
+    padding-top: 50%;
+}
+
+
+
+/*
+    Artist
+*/
+
+.tile.artist {
+    width: calc(50% - 2px);
+    color: #FFFFFF;
+}
+.tile.artist:before {
+    padding-top: 100%;
+}
+
+
+
+/*
+    Vision
+*/
+
+.tile.vision {
+    width: 100%;
+    margin-top: 50px;
+    background: #FCEC52;
+    padding: 75px 35px;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+}
+.tile.vision img {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 31px;
+}
+.tile.vision p {
+    width: 50%;
+    margin: 35px auto 0 auto;
+}
+.tile.vision .button:hover:before {
+    background: #FFFFFF;
+}
+.tile.vision .button:active:before {
+    background: #52FCC1;
+}
+
+
+
+/*
+    Services
+*/
+
+.tile.services {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 74px 0 77px 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+}
+.tile.services .list {
+    margin-top: 40px;
+}
+.tile.services .list li {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 60px;
+}
+.tile.services .list li a  {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 16px;
+    margin: 10px 0;
+    border-radius: 3px;
+    -webkit-transition: background 0.3s ease;
+       -moz-transition: background 0.3s ease;
+            transition: background 0.3s ease;
+}
+.tile.services .list li a:hover {
+    background: #FCEC52;
+}
+
+
+
+/*
+    Contacts
+*/
+
+.tile.contacts {
+    width: 100%;
+    background: #006AFF;
+    color: #FFFFFF;
+    padding: 50px 35px 60px 35px;
+    -webkit-font-smoothing: antialiased;
+
+}
+.tile.contacts img {
+    display: block;
+    margin: 0 auto;
+    width: 47px;
+    height: 47px;
+}
+.tile.contacts form {
+    width: 25%;
+    margin: 25px auto 0 auto;
+}
+.tile.contacts form input[type=text],
+.tile.contacts form input[type=email] {
+    margin-bottom: 5px;
+    background: rgba(255,255,255,0.21);
+    width: 100%;
+    line-height: 48px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #FFFFFF;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+.tile.contacts form input[type=submit] {
+    margin-top: 10px;
+    width: 100%;
+}
+.tile.contacts form input::-webkit-input-placeholder {color: #FFFFFF;}
+.tile.contacts form input     :-ms-input-placeholder {color: #FFFFFF;}
+.tile.contacts form input         ::-moz-placeholder {color: #FFFFFF;}
+.tile.contacts form input          :-moz-placeholder {color: #FFFFFF;}
+
+
+
+/*
+    Logotype
+*/
+
+.tile.logotype {
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+
+/*
+    Service
+*/
+
+.tile.service {
+    width: calc(50% - 2px);
+    background: none;
+    text-align: left;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+}
+.tile.service:before {
+    padding-top: 80%;
+}
+.tile.service .center {
+    padding: 0 50px;
+    text-align: left;
+}
+.tile.service .button {
+    float: left;
+    line-height: 19px !important;
+}
+.tile.service span {
+    float: left;
+    clear: both;
+    margin-top: 5px;
+    background: #FCEC52;
+    padding: 8px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    border-radius: 3px;
+}
+
+
+
+/*
+    Preview
+*/
+
+.tile.preview {
+    width: calc(50% - 2px);
+}
+.tile.preview:before {
+    padding-top: 80%;
+}
+
+
+
+/*
+    Image
+*/
+
+.tile.image {
+    width: 100%;
+    background: #FFFFFF;
+}
+
+
+.tile.image:before {
+    padding-top: 38%;
+}
+
+.landscape-imgbox img {
+  width: 100%;
+  text-align: center;
+}
+
+.portait-imgbox img {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/*
+    Title
+*/
+
+.tile.title {
+    padding: 50px 50% 60px 0;
+    text-align: left;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+}
+.tile.title .tags {
+    color: #16b57e;
+    line-height: 27px;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/*
+    Text
+*/
+
+.tile.text {
+    padding: 60px 50% 60px 50px;
+    text-align: left;
+    background: #FFF;
+    -webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+/*
+    Next
+*/
+
+.tile.next {
+    width: 100%;
+    background: #FCEC52;
+    padding: 125px 0;
+}
+.tile.next img {
+    width: 31px;
+    margin-bottom: 30px;
+}
+.tile.next .button:hover:before {
+    background: #FFFFFF;
+}
+.tile.next .button:active:before {
+    background: #52FCC1;
+}
+
+
+
+/*
+    Back
+*/
+
+.tile.back {
+    padding-top: 20px;
+}
+.tile.back span {
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 14px;
+    background: #1D1D1D url("../images/icons/back.png");
+    background-size: cover;
+    -webkit-transition: background-color 0.3s ease-in-out;
+       -moz-transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
+}
+.tile.back i {
+    float: left;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+    margin: 7px 0 0 10px;
+}
+.back:hover span {
+    background-color: #FCEC52;
+}
+.back:active span {
+    background-color: #52FCC1;
+}
+
+
+
+/*
+    iPad landscape
+*/
+
+@media (max-width: 1024px) {
+
+    .tile.project:before {
+        padding-top: 100%;
+    }
+    .tile.print {
+        width: 100%;
+    }
+    .tile.blank {
+        width: 100%;
+    }
+    .tile.artist {
+        width: 100%;
+    }
+    .tile.blank {
+        padding: 75px 0;
+    }
+    .tile.blank:before {
+        padding-top: 0;
+    }
+    .tile.blank .center {
+        position: static;
+        -webkit-transform: none !important;
+           -moz-transform: none !important;
+                transform: none !important;
+    }
+    .tile.vision {
+        margin-top: 25px;
+    }
+    .tile.vision p {
+        width: 100%;
+    }
+    .tile.contacts form {
+        width: 50%;
+    }
+    .tile.service {
+        width: 100%;
+        padding: 45px 0;
+
+    }
+    .tile.service:before {
+        padding-top: 0;
+    }
+    .tile.service .center {
+        position: static;
+        -webkit-transform: none !important;
+           -moz-transform: none !important;
+                transform: none !important;
+    }
+    .tile.preview {
+        width: 100%;
+    }
+    .tile.title {
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+    .tile.image:before {
+        padding-top: 70%;
+    }
+    .tile.text {
+        padding-right: 70px;
+    }
+
+}
+
+/*
+    Tablet
+*/
+
+@media (min-width: 768px) {
+  .portait-imgbox {
+    display: none;
+  }
+}
+
+/*
+    Tablet
+*/
+
+@media (max-width: 768px) {
+  .landscape-imgbox {
+    display: none;
+  }
+}
+
+
+
+/*
+    iPhone
+*/
+
+@media (max-width: 480px) {
+
+    .tile.project {
+        height: 100%;
+    }
+    .tile.project:before {
+        padding-top: 0;
+    }
+    .tile.print {
+        height: 100%;
+    }
+    .tile.print:before {
+        padding-top: 0;
+    }
+    .tile.print img {
+        top: 50%;
+        width: 100%;
+    }
+    .tile.artist {
+        height: 100%;
+    }
+    .tile.artist:before {
+        padding-top: 0;
+    }
+    .tile.vision {
+        padding: 48px 25px;
+    }
+    .tile.contacts {
+        padding: 48px 25px;
+    }
+    .tile.contacts form {
+        width: 100%;
+    }
+    .tile.services .list li {
+        width: 45%;
+        font-size: 16px;
+        line-height: 41px;
+    }
+    .tile.service {
+        padding: 40px 0;
+    }
+    .tile.service .center {
+        padding: 0 25px;
+    }
+    .tile.service .button {
+        width: 100%;
+        text-align: center;
+    }
+    .tile.service span {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+    .tile.services .list li a {
+        padding: 0 8px;
+    }
+    .tile.title {
+        padding-bottom: 45px;
+    }
+    .tile.title .tags {
+        margin-bottom: 10px;
+    }
+    .tile.image {
+        height: 100%;
+    }
+    .tile.image:before {
+        padding-top: 0;
+    }
+    .tile.text {
+        padding: 40px 15px;
+    }
+    .tile.next {
+        padding: 50px;
+    }
+
+}

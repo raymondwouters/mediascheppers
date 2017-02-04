@@ -1,0 +1,91 @@
+/**
+ * loader.css
+ * svg loader styles
+ */
+
+
+
+/*
+    Main
+*/
+
+svg {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 40px;
+    left: 50%;
+    margin: -25px 0 0 -15px;
+}
+
+
+
+/*
+    Paths
+*/
+
+svg path:first-child {
+    fill: #FEF281;
+}
+svg path:last-child {
+    fill: #1D1C1B;
+}
+
+
+
+/*
+    Transitions
+*/
+
+svg {
+    -webkit-transform: translateY(-80px);
+       -moz-transform: translateY(-80px);
+            transform: translateY(-80px);
+    -webkit-transition: -webkit-transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), top 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+       -moz-transition:    -moz-transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), top 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+            transition:         transform 0.4s 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99), top 0.65s cubic-bezier(0.94, 0.01, 0.28, 0.99);
+}
+svg.ready {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+            transform: translateY(0);
+}
+svg.active {
+    top: 50%;
+}
+svg.active path:first-child {
+    -webkit-animation: svg 1.5s 0.65s ease-in-out infinite;
+       -moz-animation: svg 1.5s 0.65s ease-in-out infinite;
+            animation: svg 1.5s 0.65s ease-in-out infinite;
+}
+
+
+
+/*
+    Keyframes
+*/
+
+@-webkit-keyframes svg {
+    0%   {fill: #FEF281;}
+    20%  {fill: #FE8181;}
+    40%  {fill: #819BFE;}
+    60%  {fill: #81FEE4;}
+    80%  {fill: #FE81AF;}
+    100% {fill: #FEF281;}
+}
+@-moz-keyframes svg {
+    0%   {fill: #FEF281;}
+    20%  {fill: #FE8181;}
+    40%  {fill: #819BFE;}
+    60%  {fill: #81FEE4;}
+    80%  {fill: #FE81AF;}
+    100% {fill: #FEF281;}
+}
+@keyframes svg {
+    0%   {fill: #FEF281;}
+    20%  {fill: #FE8181;}
+    40%  {fill: #819BFE;}
+    60%  {fill: #81FEE4;}
+    80%  {fill: #FE81AF;}
+    100% {fill: #FEF281;}
+}
